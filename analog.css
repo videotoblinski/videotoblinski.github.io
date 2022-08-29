@@ -1,0 +1,13 @@
+body {
+  background: #2c2c2c;
+  color: #aafadf;
+  font-family: sans-serif;
+  text-shadow: 2px 2px 4px black, inset 3px 3px 2px cyan;
+  margin: auto;
+  width: 75%;
+  margin-top: 15px;
+}
+h1, h2, h3, p {
+  margin-bottom: 4px;
+  margin-top: 0px;
+}
