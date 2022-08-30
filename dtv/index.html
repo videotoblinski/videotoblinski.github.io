@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>toblinstrap</title>
+    <title>DTV History</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -45,12 +45,12 @@
         if (vt_lighton) {
           document.getElementById("dark").setAttribute("media","max-width:1px;");
           lights.classList.remove("inactive");
-          navi.classList.remove("navbar-inverse");
+          navi.classList.add("navbar-inverse");
           lights.classList.add("active");
         } else {
           document.getElementById("dark").removeAttribute("media");
           lights.classList.add("inactive");
-          navi.classList.add("navbar-inverse");
+          navi.classList.remove("navbar-inverse");
           lights.classList.remove("active");
         }
       }
