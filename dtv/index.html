@@ -26,8 +26,6 @@
         width: 15px;
         height: 24px;
       }
-    </style>
-    <style id="dark">
       body {
         background: #2c2c2c;
         color: white;
@@ -36,25 +34,6 @@
         background: #1c1c1c;
       }
     </style>
-    <script>
-      var vt_lighton = false;
-      function vt_toggle() {
-        vt_lighton = !vt_lighton;
-        var lights = document.getElementById("lights");
-        var navi = document.getElementById("navigator");
-        if (vt_lighton) {
-          document.getElementById("dark").setAttribute("media","max-width:1px;");
-          lights.classList.remove("inactive");
-          navi.classList.add("navbar-inverse");
-          lights.classList.add("active");
-        } else {
-          document.getElementById("dark").removeAttribute("media");
-          lights.classList.add("inactive");
-          navi.classList.remove("navbar-inverse");
-          lights.classList.remove("active");
-        }
-      }
-    </script>
   </head>
 
   <body>
@@ -63,22 +42,16 @@
         <div class="container">
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="javascript:vt_toggle()"><i id="lights" class="light-switch inactive">&nbsp;</i></a></li>
               <li class="active"><a href="/dtv">DTV History</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="analog.html">Analog TV</a></li>
-                  <li><a href="background.html">Background</a></li>
-                  <li><a href="tests.html">This TV is Not Ready</a></li>
-                  <li><a href="transition.html">Transition</a></li>
-                  <li><a href="nightlight.html">Analog Nightlight</a></li>
-                  <li><a href="dvhs.html">D-VHS</a></li>
-                  <li><a href="resources.html">Resources</a></li>
-                </ul>
-              </li>
+              <li><a href="analog.html">Analog TV</a></li>
+              <li><a href="background.html">Background</a></li>
+              <li><a href="tests.html">This TV is Not Ready</a></li>
+              <li><a href="transition.html">Transition</a></li>
+              <li><a href="nightlight.html">Analog Nightlight</a></li>
+              <li><a href="dvhs.html">D-VHS</a></li>
+              <li><a href="resources.html">Resources</a></li>
             </ul>
-          </div><!--/.nav-collapse -->
+          </div>
         </div>
       </div>
     </div>
@@ -104,4 +77,3 @@
     </div>
   </body>
 </html>
-
