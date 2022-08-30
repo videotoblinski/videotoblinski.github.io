@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>toblinstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      i.light-switch.inactive {
+        background: url(switches.png);
+        background-position-x: 0px;
+        background-position-y: 0px;
+        display: block;
+        width: 15px;
+        height: 24px;
+      }
+      i.light-switch.active {
+        background: url(switches.png);
+        background-position-x: 15px;
+        background-position-y: 0px;
+        display: block;
+        width: 15px;
+        height: 24px;
+      }
+    </style>
+    <style id="dark">
+      body {
+        background: #2c2c2c;
+        color: white;
+      }
+      .hero-unit {
+        background: #1c1c1c;
+      }
+    </style>
+    <script>
+      var vt_lighton = false;
+      function vt_toggle() {
+        vt_lighton = !vt_lighton;
+        var lights = document.getElementById("lights");
+        var navi = document.getElementById("navigator");
+        if (vt_lighton) {
+          document.getElementById("dark").setAttribute("media","max-width:1px;");
+          lights.classList.remove("inactive");
+          navi.classList.remove("navbar-inverse");
+          lights.classList.add("active");
+        } else {
+          document.getElementById("dark").removeAttribute("media");
+          lights.classList.add("inactive");
+          navi.classList.add("navbar-inverse");
+          lights.classList.remove("active");
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="navigator" class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="javascript:vt_toggle()"><i id="lights" class="light-switch inactive">&nbsp;</i></a></li>
+              <li class="active"><a href="/dtv">DTV History</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="analog.html">Analog TV</a></li>
+                  <li><a href="background.html">Background</a></li>
+                  <li><a href="tests.html">This TV is Not Ready</a></li>
+                  <li><a href="transition.html">Transition</a></li>
+                  <li><a href="nightlight.html">Analog Nightlight</a></li>
+                  <li><a href="dvhs.html">D-VHS</a></li>
+                  <li><a href="resources.html">Resources</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h1>A History of Digital Television</h1>
+      <p>
+        Television came around in the 1920s in a crude mechanical form. However, as time
+        went on, the television was refined and by the 1950s became one of the most popular
+        forms of mass media. In the '60s, color television became readily available, and
+        in the never-ending quest to make television look better, some nerds over in Japan
+        working for NHK dropped the first real HD television standard in the mid-'80s, known
+        as MUSE Hi-Vision. This led to the first digital television stations signing on in
+        the late '90s and early 2000s, which most governments saw as an opportunity to free
+        up some analog channels. So, they axed analog over the course of several years and
+        made digital the preferred method of watching television.
+      </p>
+      <p>
+        The digital television transition, specifically in the United States, has always
+        been an interesting topic to me, so I've decided to throw a website together about
+        it. You can use the navbar at the top of the page to come back here, switch to light
+        mode, and view more information about the digital transition.
+      </p>
+    </div>
+  </body>
+</html>
+
